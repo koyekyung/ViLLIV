@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('94dbf480855b6e0da8302aaa3ac0ecee');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '빌리브에이센트',
+        description: '아래 버튼을 눌러 웹사아트에 방문해 보세요',
+        imageUrl:
+          'https://search.pstatic.net/common?src=http%3A%2F%2Fblogpfthumb.phinf.naver.net%2FMjAyMjA4MTJfMjc2%2FMDAxNjYwMjQ0NzE4MjQz.tmLL9mJB3U1CcqWO7C2Q3eUE-D_y2W__sT4Zks0OT3og.sEMg0CEUN-8hN-u2jnveNUGn_0wNt5tvBi1XOcjfXg0g.GIF.goboojang7%2FprofileImage.gif&type=fff264_180',
+        link: {
+          mobileWebUrl: 'https://blog.naver.com/goboojang7/223059991614',
+          webUrl: 'https://blog.naver.com/goboojang7/223059991614',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '지금 바로 접속하기',
+          link: {
+            mobileWebUrl: 'https://blog.naver.com/goboojang7/223059991614',
+            webUrl: 'https://blog.naver.com/goboojang7/223059991614',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
